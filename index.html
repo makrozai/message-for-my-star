@@ -2277,6 +2277,7 @@
   <!-- partial:index.partial.html -->
   <body class="container">
     <div class="message-text">
+      <audio src="quedate.mp3" type="audio/mpeg" autoplay id="myaudio"></audio>
       <ul id="myList">
         <li class="hidden">
           <p>¿Viste que ya vamos saliendo 31 días?</p>
@@ -2837,7 +2838,7 @@
             listItems[delay].classList.add("hidden");
             delay++;
             showNextItem(); // Mostrar el siguiente elemento después de ocultar el actual
-          }, 12000); // Ocultar después de 5 segundos
+          }, 15000); // Ocultar después de 5 segundos
         } else {
           // Cuando se haya mostrado el último elemento, reiniciar la secuencia
           delay = 0;
@@ -2847,6 +2848,9 @@
 
       showNextItem(); // Comenzar la secuencia de aparición
     });
+
+    var audio = document.getElementById("myaudio");
+      audio.volume = 0.1;
 
     onload = () => {
       document.body.classList.remove("container");
