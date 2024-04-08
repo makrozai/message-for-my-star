@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <title>Flores y corazones</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <style>
@@ -2270,14 +2271,21 @@
         opacity: 1;
       }
     }
+    audio {
+      position: absolute;
+      top: .5rem;
+      z-index: 1000;
+      height: 40px;
+      opacity: .5;
+    }
   </style>
 </head>
 
 <body>
   <!-- partial:index.partial.html -->
   <body class="container">
+    <audio src="quedate.mp3" type="audio/mpeg" autoplay id="myaudio" controls></audio>
     <div class="message-text">
-      <audio src="quedate.mp3" type="audio/mpeg" autoplay id="myaudio"></audio>
       <ul id="myList">
         <li class="hidden">
           <p>¿Viste que ya vamos saliendo 31 días?</p>
